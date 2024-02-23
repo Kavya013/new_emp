@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 
 const app = express();
-const port = 3000;
+//const port = 3000;
 const frontendPath = __dirname;
 app.use(express.static(frontendPath));
 
@@ -79,7 +79,7 @@ app.delete('/deleteEmployeeData/:id', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on https://employee-management-sbez.onrender.com/`);
 });
 
 
