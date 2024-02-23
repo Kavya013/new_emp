@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  .container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  select {
+    width: calc(100% - 12px); /* Adjusted width to accommodate margin */
+    padding: 6px; /* Reduced padding for a more compact look */
+    margin: 6px 0; /* Reduced margin for a more compact look */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Style radio button labels */
+  label.gender-label {
+    margin-right: 20px;
+  }
+  
+  /* Increase spacing between gender label and designation field */
+  select[name="designation"] {
+    margin-top: 20px;
+  }
+  
+  button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 8px 16px; /* Reduced padding for a more compact button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Table styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 6px; /* Reduced padding for a more compact table */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
