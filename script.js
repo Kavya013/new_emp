@@ -49,6 +49,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const designation = document.getElementById('designation').value.trim();
     const salary = document.getElementById('salary').value.trim();
 
+    if (employeeName.length > 20) {
+      alert('Employee name should not exceed 20 characters');
+      return null;
+    }
+  
+    // Validate date of birth
+    const dobYear = new Date(dob).getFullYear();
+    if (dobYear > 2000) {
+      alert('Employee date of birth should be before the year 2000');
+      return null;
+    }
+
     if (!employeeName || !employeeId || !department || !dob || !gender || !designation || !salary) {
       alert('Please fill all fields');
       return null;
