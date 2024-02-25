@@ -73,6 +73,38 @@ body {
   th {
     background-color: #f2f2f2;
   }
+
+  /* Add styles for the search input */
+#search-input {
+  width: 100%;
+  padding: 6px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style the table to adjust for the search input */
+#employee-table {
+  margin-top: 10px;
+}
+
+/* Adjust table width for better visibility */
+#employee-table th,
+#employee-table td {
+  padding: 10px;
+}
+
+/* Adjust table header font weight for better visibility */
+#employee-table th {
+  font-weight: bold;
+}
+
+/* Adjust table row hover effect for better visibility */
+#employee-table tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
   
   
   

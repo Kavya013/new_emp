@@ -1,6 +1,6 @@
 // Function to add a new row to the table
 function addRowToTable(data) {
-  console.log(data);
+  //console.log(data);
   const tableBody = document.getElementById('employee-table-body');
   const newRow = document.createElement('tr');
   newRow.setAttribute('data-id', data.employee_id); // Use employeeId as the attribute
@@ -37,6 +37,12 @@ document.addEventListener('DOMContentLoaded', function() {
       deleteRow(employeeId); // Delete row from local storage
       row.remove();
     }
+  });
+
+  // Add event listener to the search input
+  document.getElementById('search-input').addEventListener('input', function() {
+    const searchValue = this.value.trim().toLowerCase();
+    filterTable(searchValue);
   });
 
   // Function to retrieve form data
@@ -104,6 +110,34 @@ document.addEventListener('DOMContentLoaded', function() {
   function clearForm() {
     document.getElementById('employee-form').reset();
   }
+
+  // Function to filter the table based on search criteria
+  function filterTable(searchValue) {
+    const tableRows = document.querySelectorAll('#employee-table-body tr');
+
+    tableRows.forEach(row => {
+      const name = row.cells[0].textContent.toLowerCase();
+      const employeeId = row.cells[1].textContent.toLowerCase();
+      const department = row.cells[2].textContent.toLowerCase();
+      const dob = row.cells[3].textContent.toLowerCase();
+      const gender = row.cells[4].textContent.toLowerCase();
+      const designation = row.cells[5].textContent.toLowerCase();
+      const salary = row.cells[6].textContent.toLowerCase();
+
+      if (name.includes(searchValue) ||
+          employeeId.includes(searchValue) ||
+          department.includes(searchValue) ||
+          dob.includes(searchValue) ||
+          gender.includes(searchValue) ||
+          designation.includes(searchValue) ||
+          salary.includes(searchValue)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
 });
 
 // Function to load data into the table
@@ -141,6 +175,7 @@ function deleteRow(employeeId) {
     alert('Something went wrong:(');
   });
 }
+
 
 
 
